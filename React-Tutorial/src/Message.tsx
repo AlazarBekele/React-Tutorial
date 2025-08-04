@@ -9,30 +9,26 @@ function Message() {
         'Ethiopia'
     ]
 
-    items = [];
-
     let Maping = items.map (items => <li key={items}>{items}</li>)
-
-        if (items.length === 0)
-            return <p>No Items Here</p>
 
     return (
 
         <>
 
-            <div className="MainNav">
-
-
-
-            </div>
+            <div className="MainNav"></div>
 
             <div className="card">
 
-                <ul className="list-group list-group-flush">
+                <h1>List</h1>
 
-                    {Maping}
+                    {items.length === 0 && <p>No Items Here</p>}
 
-                </ul>
+                    <ul className="list-gruop">
+
+                        <li className="list-group-item">{Maping}</li>
+
+                    </ul>
+
 
             </div>
 
