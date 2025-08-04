@@ -1,10 +1,24 @@
-import { Fragment } from "react/jsx-runtime";
 
 // Use Fragment Method
 function Message() {
+
+    let items = [
+        'New York',
+        'San Francisco',
+        'Tokyo',
+        'Ethiopia'
+    ]
+
+    items = [];
+
+    let Maping = items.map (items => <li key={items}>{items}</li>)
+
+        if (items.length === 0)
+            return <p>No Items Here</p>
+
     return (
 
-        <Fragment>
+        <>
 
             <div className="MainNav">
 
@@ -15,14 +29,14 @@ function Message() {
             <div className="card">
 
                 <ul className="list-group list-group-flush">
-                    <li className="list-group-item">An item</li>
-                    <li className="list-group-item">A second item</li>
-                    <li className="list-group-item">A third item</li>
+
+                    {Maping}
+
                 </ul>
 
             </div>
 
-        </Fragment>
+        </>
 
     )
 }
