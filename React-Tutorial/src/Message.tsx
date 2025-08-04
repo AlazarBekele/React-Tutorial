@@ -1,9 +1,10 @@
+import { Fragment } from "react/jsx-runtime";
 
-// Use Div Method
+// Use Fragment Method
 function Message() {
     return (
 
-        <div>
+        <Fragment>
 
             <div className="MainNav">
 
@@ -21,7 +22,7 @@ function Message() {
 
             </div>
 
-        </div>
+        </Fragment>
 
     )
 }
