@@ -9,8 +9,6 @@ function Message() {
         'Ethiopia'
     ]
 
-    let Maping = items.map (items => <li key={items}>{items}</li>)
-
     return (
 
         <>
@@ -23,9 +21,13 @@ function Message() {
 
                     {items.length === 0 && <p>No Items Here</p>}
 
-                    <ul className="list-gruop">
+                    <ul className="list-group">
 
-                        <li className="list-group-item">{Maping}</li>
+                          { items.map ( (items) => (
+                             
+                             <li className="list-group-itme" key={items} onClick={() => console.log (items)}>{items}</li>
+
+                          ))}
 
                     </ul>
 
